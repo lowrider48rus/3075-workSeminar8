@@ -18,7 +18,7 @@ Console.WriteLine("Сформирован массив");
 PrintArray(matrix);
 Console.WriteLine();
 
-average(matrix);
+minSum(matrix);
 
 
 void PrintArray(int[,] matr){
@@ -45,29 +45,6 @@ void FillArray(int[,] matr, int min, int max)
 }
 
 void minSum(int[,] matr)
-{ 
-    int[,] res = new int[matr.GetLength(0), matr.GetLength(1)];
-    int[] clipboard = new int[matr.GetLength(1)];
-    
-for (int i = 0; i < matr.GetLength(0); i++)
-{
-
-for (int j = 0; j < matr.GetLength(1); j++)
-{
-    clipboard[j] = matr[i,j];
-}
-Array.Sort(clipboard);
-Array.Reverse(clipboard);
-        
-for (int j = 0; j < matr.GetLength(1); j++)
-{
-    res[i,j] = clipboard[j];
-}
-}       
-
-    }
-
-void average(int[,] matr)
 {
     int[] result = new int[matr.GetLength(0)];
     for (int i = 0; i < matr.GetLength(0); i++)
